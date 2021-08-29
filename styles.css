@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: beige;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer */
+footer {
+margin-top: auto;
+background-color: cadetblue;
+
+}
+
+footer .container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+}
+
+.redes-sociales .i {
+    font-size: 50px;
+    padding-left: 50px ;
+}
