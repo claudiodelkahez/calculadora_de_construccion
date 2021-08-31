@@ -10,12 +10,7 @@ html {
 body {
     min-height: 100%;
 }
-.grid-container > * {
-    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
-    border-radius: 4px;
-    padding: 10px;
-    text-align: center;
-}
+
 /* HEADER */
 
 .header {
@@ -23,59 +18,64 @@ body {
     background-color: #85aedd;
 }
 
+/* MAIN */
+
+.main {
+    padding: 50px;
+}
+
 /* NAVBAR */
 
 .navbar {
     grid-area: navbar;
-    background-color: #afd6af;
+    background-color: #000000;
+    color: white;
 }
 
 /* SIDEBAR */
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #fdcfcf;
-    padding: 10px;
+    background-color: #f6df1c;
+
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    border: solid;
 }
 
 .sidebar .box1 {
-    background-color: yellow;
-}
-.sidebar .box1 .container {
-    padding:  10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     text-align: center;
-
+    background-color: #f6df1c;
 }
 
 .box1 {
-    padding: 5px;
+    padding: 10px 10px 10px 10px;
+    border: solid;
 }
 
 .container .p {
     margin: 10px;
 }
 
-
 .sidebar .box2 {
-    background-color: yellow;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    background-color: #f6df1c;
 }
 .sidebar .box3 {
-    background-color: yellow;
+    text-align: center;
+    padding: 10px;
+    background-color: #f6df1c;
 }
 .sidebar .box4 {
-    background-color: yellow;
+    text-align: center;
+    padding: 10px;
+    background-color: #f6df1c;
 }
 
-
-
-
-
-
-
-
-
 /* MAIN */
-
 
 .main {
     grid-area: main;
@@ -91,7 +91,6 @@ body {
 
 /* media queries smartphone */
 
-
 .grid-container {
     display: grid;
     gap: 1px;
@@ -99,8 +98,7 @@ body {
         "header" 100px
         "navbar" 50px
         "main" auto
-        "sidebar" 100px
-        "footer" 30px;
+        "sidebar" 100px;
 }
 
 /* media queries tablet */
@@ -111,7 +109,7 @@ body {
             "header header" 100px
             "navbar navbar" 50px
             "main sidebar" auto
-            "footer footer" 30px /
+            /
             auto 400px;
     }
 }
@@ -120,10 +118,13 @@ body {
 
 @media (min-width: 900px) {
     .grid-container {
-        grid-template-columns:
+        grid-template:
             "header header header" 100px
             "navbar main sidebar" auto
-            "footer footer footer" 30px /
-            200px auto 400px;
+            /
+            100px auto 600px;
+    }
+    .sidebar {
+        display: grid;
     }
 }
